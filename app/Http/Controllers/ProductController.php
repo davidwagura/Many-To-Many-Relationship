@@ -19,4 +19,9 @@ class ProductController extends Controller
         $product->categories()->attach($category);
         return 'Success';
     }
+
+    public function show(Product $product)
+    {
+        return view('product.show', compact('product'));
+    }
 }
